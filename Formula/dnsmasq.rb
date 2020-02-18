@@ -14,6 +14,8 @@ class Dnsmasq < Formula
 
   depends_on "pkg-config" => :build
 
+  skip_clean "etc/dnsmasq.d/ppp", "etc/dnsmasq.d/dhcpc"
+
   def install
     ENV.deparallelize
 
